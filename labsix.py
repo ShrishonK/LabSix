@@ -25,8 +25,15 @@ def encode(value):
         newList.append(j)
     return newList
 
+
 def decode(value):
-    pass
+    for i in range(len(value)):
+        value[i] = int(value[i]) - 3
+        if value[i] < 0:
+            value[i] += 10
+    str_list = [str(i) for i in value]
+    decoded_pass = ''.join(str_list)
+    return decoded_pass
 
 
 while True:
